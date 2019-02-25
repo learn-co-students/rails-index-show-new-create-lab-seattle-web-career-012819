@@ -1,0 +1,9 @@
+<div>
+  <% @coupons.each do |coupon| %>
+  <li>
+    <%= link_to coupon_path(coupon), id: coupon.coupon_code do %>
+        <%= content_tag(:p, "#{coupon.store}") %>
+  <% end %>
+  </li>
+  <% end %>
+</div>
