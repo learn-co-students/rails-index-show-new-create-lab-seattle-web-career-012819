@@ -1,0 +1,11 @@
+<ul>
+  <% @coupons.each do |coupon| %>
+    <li>
+      <%# At no point was the need for an Id ever mentioned anywhere in the test or lab article. %>
+      <%# This needs to be edited to indicate at least some hint of how to pass the test. %>
+      <%= link_to coupon_path(coupon), id: coupon.coupon_code do %>
+        <%= content_tag(:p, "#{coupon.store}") %>
+      <% end %>
+    </li>
+  <% end %>
+</ul>
