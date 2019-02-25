@@ -70,6 +70,7 @@ describe 'linking from the index page to the show page' do
   it 'index page links to coupon page' do
     linked_coupon = Coupon.create(coupon_code: "FREESTUFF", store: "Chipotle")
     visit coupons_path
+    page.save_page
     expect(page).to have_link(linked_coupon.coupon_code, href: coupon_path(linked_coupon))
   end
 end

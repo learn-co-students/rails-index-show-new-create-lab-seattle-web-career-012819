@@ -5,8 +5,12 @@ describe CouponsController do
   describe "POST create" do
     context "with valid attributes" do
       it "creates a new coupon" do
-        expect{
-          post :create, { :coupon => { :coupon_code => "ASD123", :store => "Dean and Deluca" } }
+        expect{post :create, 
+                  { :coupon => 
+                    { 
+                      :coupon_code => "ASD123", 
+                      :store => "Dean and Deluca" 
+                  } }
         }.to change(Coupon,:count).by(1)
       end
       
