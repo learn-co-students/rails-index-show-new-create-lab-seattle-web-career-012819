@@ -1,0 +1,5 @@
+<% @student.attributes.each do |attr,val| %>
+  <% unless val.to_s.include?("UTC")%>
+    <h1><%= "#{attr}: #{val}" %></h1>
+  <% end %>
+<% end %>
